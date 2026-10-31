@@ -1,0 +1,81 @@
+{
+  "day": 1,
+  "total": 28,
+  "minutes": 45,
+  "video": "c4l1GEPrFHc",
+  "title": "Түгдрэхгүй ярих",
+  "topic": "Ойлгоогүй үед хэрхэн яриагаа үргэлжлүүлэх вэ",
+  "context": "Бодит яриан дунд үг мартах, асуултыг сайн ойлгохгүй байх нь хэнд ч тохиолддог. Ялгаа нь зогсчихдог уу, үргэлжлүүлдэг үү гэдэгт байна. Өнөөдөр түгдрэх үед хэлэх бэлэн хэллэгүүдийг сурна.",
+  "steps": [["listen", "Сонсох", 10], ["phrases", "Хэллэг", 10], ["contrast", "Ялгаа", 5], ["read", "Унших", 8], ["task", "Бичих", 15]],
+  "listen": {
+    "lead": "Дууг хоёр удаа сонсоод асуултад хариул. Бичлэгийг эхлээд харахгүй.",
+    "questions": [
+      "When and where are Maya and Ben planning to meet?",
+      "What does Ben ask Maya to repeat?",
+      "What is a stationery shop?",
+      "What does Ben want to do when he says, “Give me a second”?"
+    ],
+    "transcript": [
+      ["Maya", "Hey, are we still meeting tomorrow?"],
+      ["Ben", "Yeah. What time was it again?"],
+      ["Maya", "Six. We're supposed to meet outside the library."],
+      ["Ben", "Sorry, I didn't catch that. Outside the library at six?"],
+      ["Maya", "That's right."],
+      ["Ben", "And we're going to the stationery shop afterward, right?"],
+      ["Maya", "The stationery shop? What's that?"],
+      ["Ben", "It's a shop that sells things like notebooks, pens, and paper."],
+      ["Maya", "Oh, got it. Yes, we can go there after we meet."],
+      ["Ben", "Great. Give me a second—I'm putting it in my calendar."],
+      ["Maya", "No problem. Just message me if anything changes."]
+    ]
+  },
+  "phrases": [
+    ["Could you say that again?", "Дахиад хэлж өгч болох уу?", "Давтаж сонсох хэрэгтэй үед"],
+    ["Sorry, I didn't catch that.", "Уучлаарай, сайн сонссонгүй.", "Сонссон зүйлээ алдсан үед"],
+    ["What does “___” mean?", "“___” гэдэг нь юу гэсэн үг вэ?", "Үгийн утгыг мэдэхгүй үед"],
+    ["How do you say “___” in English?", "“___”-ийг англиар юу гэдэг вэ?", "Яаж нэрлэхээ мэдэхгүй үед"],
+    ["Give me a second.", "Түр хүлээгээрэй.", "Бодох, шалгах, бэлдэх хугацаа хэрэгтэй үед"],
+    ["What I mean is …", "Миний хэлэх гэсэн санаа бол…", "Санаагаа тодруулах үед"],
+    ["Let me put it another way.", "Өөрөөр тайлбарлая.", "Өмнөх тайлбар ойлгомжгүй байж болох үед"],
+    ["I'm not sure how to explain it.", "Яаж тайлбарлахаа сайн мэдэхгүй байна.", "Санаагаа үгээр илэрхийлэхэд хүндрэлтэй үед"],
+    ["Do you mean …?", "Чи … гэж хэлж байна уу?", "Ойлгосноо шалгах үед"]
+  ],
+  "contrast": [
+    ["Давтуулах уу, тайлбарлуулах уу?", [["Өгүүлбэрийг сонсоогүй", "Sorry, I didn't catch that."], ["Үг сонссон ч утгыг нь мэдэхгүй", "What does ‘supposed to’ mean?"]]],
+    ["Давтуулах уу, өөрөөр хэлүүлэх үү?", [["Нөгөө хүн ярьсан зүйлээ давтаасай", "Could you say that again?"], ["Нөгөө хүн өөрөөр тайлбарлаасай", "Let me put it another way."]]],
+    ["Хугацаа авах уу, санаагаа тодруулах уу?", [["Хуанлиа шалгах хэрэгтэй", "Give me a second."], ["Нөгөө хүн таныг буруу ойлгосон", "What I mean is …"]]]
+  ],
+  "read": {
+    "lead": "Найзуудын чат. Нэг удаа уншаад асуултад хариул.",
+    "chat": [
+      ["Naraa", "14:10", "Hey, are we meeting at the main entrance or the side entrance?"],
+      ["Tom", "14:12", "The side entrance, next to the car park."],
+      ["Naraa", "14:13", "Sorry, do you mean the entrance near the bus stop?"],
+      ["Tom", "14:14", "No, the other one. Walk past the bus stop, then turn right. It's beside the small café."],
+      ["Naraa", "14:15", "Got it. I'll meet you there at 3:30."],
+      ["Tom", "14:15", "Perfect. See you then."]
+    ],
+    "questions": [
+      "Where does Tom want to meet Naraa?",
+      "Why does Naraa ask Tom another question about the entrance?",
+      "What directions does Tom give Naraa?",
+      "What time will they meet, and what does Naraa say to show she understood?"
+    ]
+  },
+  "task": {
+    "title": "Уулзалтаа баталгаажуул",
+    "lead": "Найз чинь танд ингэж бичжээ:",
+    "message": "Hey! Let's meet Friday at 5 near the station. We'll go to the place I mentioned yesterday. Bring the documents, too.",
+    "problems": [
+      "Аль буудлыг хэлсэн нь тодорхойгүй",
+      "Өчигдөр дурдсан газрыг санахгүй байна",
+      "Бичиг баримт хэвлэсэн үү, цахим уу гэдгийг мэдэхгүй"
+    ],
+    "rules": [
+      "50–80 үгтэй англиар бичнэ",
+      "Эелдэг, байгалийн хэлээр",
+      "Ойлгоогүй зүйлээ ойлгосон дүр үзүүлэхгүй",
+      "Эцэст нь мэдээлэл тодорхой болмогц баталгаажуулна гэж хэл"
+    ]
+  }
+}
