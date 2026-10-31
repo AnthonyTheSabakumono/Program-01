@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="mn" data-theme="dark" data-ex="cards">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Өдөр 1 — Түгдрэхгүй ярих</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Serif+Display&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0A0A0A;--panel:#131312;--line:#26241f;--ink:#ECE8DD;--mute:#9A9588;--gold:#C9A84C;--gold-ink:#0A0A0A;--bubble:#1c1b18;
+--serif:"DM Serif Display",Georgia,serif;--sans:Outfit,system-ui,sans-serif;--mono:"DM Mono",ui-monospace,monospace}
+[data-theme=light]{--bg:#F6F3EC;--panel:#FFFFFF;--line:#E2DDD0;--ink:#1B1A17;--mute:#6C675B;--gold:#8A6D1C;--gold-ink:#FFFFFF;--bubble:#EEE9DB}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.65 var(--sans)}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.wrap{max-width:720px;margin:0 auto;padding:0 20px 120px}
+.top{display:flex;justify-content:space-between;align-items:center;padding:18px 0;font-size:14px;color:var(--mute)}
+.top b{color:var(--ink);font-weight:500}
+.strip{display:grid;grid-template-columns:repeat(28,1fr);gap:3px;margin-bottom:44px}
+.strip a{height:6px;background:var(--line);border-radius:2px}
+.strip a.done{background:color-mix(in srgb,var(--gold) 45%,var(--line))}
+.strip a.now{background:var(--gold)}
+h1{font:400 clamp(34px,7vw,52px)/1.1 var(--serif);margin:0 0 6px}
+.sub{font-family:var(--mono);font-size:13px;color:var(--mute);margin:0 0 22px}
+.ctx{font-size:18px;max-width:60ch;margin:0 0 36px}
+h2{font:400 26px/1.2 var(--serif);margin:0 0 4px}
+section{padding:36px 0;border-top:1px solid var(--line)}
+.lead{color:var(--mute);margin:0 0 18px;font-size:15px}
+.steps{list-style:none;margin:0 0 44px;padding:0;border:1px solid var(--line);border-radius:10px;background:var(--panel)}
+.steps li{display:flex;gap:14px;align-items:center;padding:13px 16px;border-top:1px solid var(--line)}
+.steps li:first-child{border-top:0}
+.steps input{accent-color:var(--gold);width:18px;height:18px;flex:none}
+.steps a{text-decoration:none;flex:1}
+.steps span{font-family:var(--mono);font-size:13px;color:var(--mute)}
+.steps li.ok a{color:var(--mute);text-decoration:line-through}
+.video{aspect-ratio:16/9;background:var(--panel);border:1px solid var(--line);border-radius:10px;display:grid;place-items:center;color:var(--mute);font-size:14px;overflow:hidden}
+.video iframe{width:100%;height:100%;border:0}
+details{margin-top:14px;border:1px solid var(--line);border-radius:10px;background:var(--panel)}
+summary{cursor:pointer;padding:12px 16px;color:var(--mute);font-size:15px}
+details .in{padding:0 16px 14px;font-size:15px}
+.cards{display:grid;gap:10px}
+.ex{border:1px solid var(--line);border-radius:10px;background:var(--panel);padding:14px 16px}
+.ex .en{font:500 19px/1.35 var(--sans);margin:0}
+.ex .mn{margin:4px 0 0;color:var(--ink);font-size:16px}
+.ex .use{margin:2px 0 0;color:var(--mute);font-size:14px}
+[data-ex=list] .cards{gap:0;border:1px solid var(--line);border-radius:10px;background:var(--panel)}
+[data-ex=list] .ex{border:0;border-top:1px solid var(--line);border-radius:0;background:none}
+[data-ex=list] .ex:first-child{border-top:0}
+@media(min-width:640px){[data-ex=cards] .cards{grid-template-columns:1fr 1fr}}
+.pair{display:grid;gap:6px;padding:14px 0;border-top:1px solid var(--line)}
+.pair:first-of-type{border-top:0}
+.pair h3{margin:0;font:500 16px var(--sans)}
+.row{display:grid;grid-template-columns:1fr;gap:2px;font-size:15px}
+.row q{font-family:var(--mono);font-size:14px;quotes:none;color:var(--gold)}
+@media(min-width:640px){.row{grid-template-columns:1fr 1.1fr;gap:16px}}
+.chat{display:flex;flex-direction:column;gap:8px;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px}
+.msg{max-width:84%;background:var(--bubble);padding:9px 13px;border-radius:16px 16px 16px 4px;font-size:16px;line-height:1.5}
+.msg small{display:block;font-family:var(--mono);font-size:11px;color:var(--mute);margin-bottom:2px}
+.msg.r{align-self:flex-end;background:var(--gold);color:var(--gold-ink);border-radius:16px 16px 4px 16px}
+.msg.r small{color:inherit;opacity:.7}
+ol.q{padding-left:22px;margin:18px 0 0}ol.q li{margin:8px 0}
+.note{font-size:14px;color:var(--mute);margin-top:14px}
+.task{border:1px solid var(--gold);border-radius:10px;padding:18px 20px;background:var(--panel)}
+.task blockquote{margin:12px 0;padding:10px 14px;border-left:3px solid var(--gold);background:var(--bubble);font-style:italic}
+.task ul{margin:8px 0 0;padding-left:20px}
+.btn{display:inline-block;margin-top:18px;background:var(--gold);color:var(--gold-ink);border:0;border-radius:8px;padding:12px 20px;font:500 16px var(--sans);cursor:pointer}
+.nav{display:flex;justify-content:space-between;margin-top:20px;font-size:15px}
+#pv{position:fixed;left:0;right:0;bottom:0;background:var(--panel);border-top:1px solid var(--line);padding:10px 16px;display:flex;gap:18px;flex-wrap:wrap;justify-content:center;font-size:13px;color:var(--mute)}
+#pv button{background:none;border:1px solid var(--line);color:var(--ink);border-radius:6px;padding:4px 10px;font:inherit;cursor:pointer}
+#pv button[aria-pressed=true]{background:var(--gold);color:var(--gold-ink);border-color:var(--gold)}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="wrap" id="app"></div>
+
+<div id="pv"><span>Look:
+<button data-k="theme" data-v="dark" aria-pressed="true">Dark</button>
+<button data-k="theme" data-v="light" aria-pressed="false">Paper</button></span>
+<span>Expressions:
+<button data-k="ex" data-v="cards" aria-pressed="true">Cards</button>
+<button data-k="ex" data-v="list" aria-pressed="false">List</button></span></div>
+
+<script>
+/* The page is a template. Real use: days/day-01.json ... days/day-28.json, opened as ?day=1 */
+
+
+const $ = s => document.querySelector(s);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+async function load(){
+  const n = new URLSearchParams(location.search).get('day') || 1;
+  try{ const r = await fetch(`days/day-${String(n).padStart(2,'0')}.json`); if(!r.ok) throw 0; return await r.json(); }
+  catch(e){ return SAMPLE; }
+}
+
+function render(d){
+  document.title = `Өдөр ${d.day} — ${d.title}`;
+  const prev = d.day > 1 ? `<a href="?day=${d.day-1}">← Өдөр ${d.day-1}</a>` : '<span></span>';
+  const next = d.day < d.total ? `<a href="?day=${d.day+1}">Өдөр ${d.day+1} →</a>` : '<span></span>';
+  const strip = Array.from({length:d.total},(_,i)=>`<a href="?day=${i+1}" aria-label="Өдөр ${i+1}" class="${i+1<d.day?'done':i+1===d.day?'now':''}"></a>`).join('');
+  const steps = d.steps.map(s=>`<li data-s="${s[0]}"><input type="checkbox" id="c-${s[0]}" aria-label="${esc(s[1])}"><a href="#${s[0]}">${esc(s[1])}</a><span>${s[2]} мин</span></li>`).join('');
+  const qs = a => `<ol class="q">${a.map(q=>`<li>${esc(q)}</li>`).join('')}</ol>`;
+  const video = d.video ? `<iframe src="https://www.youtube-nocookie.com/embed/${esc(d.video)}" allowfullscreen title="Сонсох бичлэг"></iframe>` : 'YouTube бичлэг энд гарна';
+  $('#app').innerHTML = `
+  <div class="top"><b>AnthonyTheSabakumono</b><span>${d.total} өдрийн хөтөлбөр</span></div>
+  <nav class="strip" aria-label="Өдрүүд">${strip}</nav>
+  <header>
+    <h1>${esc(d.title)}</h1>
+    <p class="sub">Өдөр ${d.day}/${d.total} · ойролцоогоор ${d.minutes} мин</p>
+    <p class="ctx">${esc(d.context)}</p>
+  </header>
+  <ul class="steps" aria-label="Өнөөдрийн алхмууд">${steps}</ul>
+
+  <section id="listen"><h2>Сонсох</h2><p class="lead">${esc(d.listen.lead)}</p>
+    <div class="video">${video}</div>${qs(d.listen.questions)}
+    <details><summary>Хариулсны дараа бичвэрийг харах</summary><div class="in">${d.listen.transcript.map(l=>`<p style="margin:6px 0"><b>${esc(l[0])}:</b> ${esc(l[1])}</p>`).join('')}</div></details>
+  </section>
+
+  <section id="phrases"><h2>Хэллэг</h2><p class="lead">Өнөөдөр цээжлэх хэллэгүүд. Чанга дуугаар хэд хэд давт.</p>
+    <div class="cards">${d.phrases.map(p=>`<div class="ex"><p class="en">${esc(p[0])}</p><p class="mn">${esc(p[1])}</p><p class="use">${esc(p[2])}</p></div>`).join('')}</div>
+  </section>
+
+  <section id="contrast"><h2>Ялгаа</h2><p class="lead">Төстэй хэллэгүүдийг хэзээ ялгаж хэрэглэх вэ.</p>
+    ${d.contrast.map(c=>`<div class="pair"><h3>${esc(c[0])}</h3>${c[1].map(r=>`<div class="row"><span>${esc(r[0])}</span><q>${esc(r[1])}</q></div>`).join('')}</div>`).join('')}
+  </section>
+
+  <section id="read"><h2>Унших</h2><p class="lead">${esc(d.read.lead)}</p>
+    <div class="chat">${d.read.chat.map(m=>`<div class="msg ${m[0]==='Tom'?'r':''}"><small>${esc(m[0])} · ${esc(m[1])}</small>${esc(m[2])}</div>`).join('')}</div>${qs(d.read.questions)}
+    <p class="note">Дээрх хоёр хэсгийн хариултыг Discord дээр бичихгүй. Хариултын түлхүүр /submit хийсний дараа гарна.</p>
+  </section>
+
+  <section id="task"><h2>${esc(d.task.title)}</h2>
+    <div class="task"><p style="margin:0">${esc(d.task.lead)}</p><blockquote>${esc(d.task.message)}</blockquote>
+      <p style="margin:0 0 4px">Танд гурван асуудал байна:</p><ul>${d.task.problems.map(p=>`<li>${esc(p)}</li>`).join('')}</ul>
+      <p style="margin:14px 0 4px">Хариугаа бичихдээ:</p><ul>${d.task.rules.map(p=>`<li>${esc(p)}</li>`).join('')}</ul>
+      <button class="btn" id="cp">Discord дээр /submit бичих</button>
+      <p class="note" id="cpn">Товч дарахад /submit командыг хуулна. Discord руу очоод буулгана.</p></div>
+  </section>
+  <div class="nav">${prev}${next}</div>`;
+
+  // remember ticked steps in this browser only
+  const key = `day${d.day}`; let saved = {};
+  try{ saved = JSON.parse(localStorage.getItem(key)||'{}'); }catch(e){}
+  d.steps.forEach(s=>{ const li=$(`li[data-s=${s[0]}]`), cb=li.querySelector('input'); cb.checked=!!saved[s[0]]; li.classList.toggle('ok',cb.checked);
+    cb.addEventListener('change',()=>{ li.classList.toggle('ok',cb.checked); saved[s[0]]=cb.checked; try{localStorage.setItem(key,JSON.stringify(saved));}catch(e){} }); });
+  $('#cp').addEventListener('click',async()=>{ try{ await navigator.clipboard.writeText('/submit'); $('#cpn').textContent='Хуулагдлаа. Discord дээр буулгана уу.'; }catch(e){ $('#cpn').textContent='Discord дээр /submit гэж бичнэ.'; } });
+}
+
+document.querySelectorAll('#pv button').forEach(b=>b.addEventListener('click',()=>{
+  document.documentElement.dataset[b.dataset.k]=b.dataset.v;
+  document.querySelectorAll(`#pv button[data-k=${b.dataset.k}]`).forEach(x=>x.setAttribute('aria-pressed',x===b));
+}));
+load().then(render);
+</script>
+</body>
+</html>
