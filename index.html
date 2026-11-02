@@ -28,13 +28,6 @@ h1{font:400 clamp(34px,7vw,52px)/1.1 var(--serif);margin:0 0 6px}
 h2{font:400 26px/1.2 var(--serif);margin:0 0 4px}
 section{padding:36px 0;border-top:1px solid var(--line)}
 .lead{color:var(--mute);margin:0 0 18px;font-size:15px}
-.steps{list-style:none;margin:0 0 44px;padding:0;border:1px solid var(--line);border-radius:10px;background:var(--panel)}
-.steps li{display:flex;gap:14px;align-items:center;padding:13px 16px;border-top:1px solid var(--line)}
-.steps li:first-child{border-top:0}
-.steps input{accent-color:var(--gold);width:18px;height:18px;flex:none}
-.steps a{text-decoration:none;flex:1}
-.steps span{font-family:var(--mono);font-size:13px;color:var(--mute)}
-.steps li.ok a{color:var(--mute);text-decoration:line-through}
 .video{aspect-ratio:16/9;background:var(--panel);border:1px solid var(--line);border-radius:10px;display:grid;place-items:center;color:var(--mute);font-size:14px;overflow:hidden}
 .video iframe{width:100%;height:100%;border:0}
 details{margin-top:14px;border:1px solid var(--line);border-radius:10px;background:var(--panel)}
@@ -65,6 +58,8 @@ ol.q{padding-left:22px;margin:18px 0 0}ol.q li{margin:8px 0}
 .task{border:1px solid var(--gold);border-radius:10px;padding:18px 20px;background:var(--panel)}
 .task blockquote{margin:12px 0;padding:10px 14px;border-left:3px solid var(--gold);background:var(--bubble);font-style:italic}
 .task ul{margin:8px 0 0;padding-left:20px}
+.answer{display:block;width:100%;min-height:180px;margin-top:20px;padding:14px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);font:400 16px/1.6 var(--sans);resize:vertical}
+.answer::placeholder{color:var(--mute)}
 .btn{display:inline-block;margin-top:18px;background:var(--gold);color:var(--gold-ink);border:0;border-radius:8px;padding:12px 20px;font:500 16px var(--sans);cursor:pointer}
 .nav{display:flex;justify-content:space-between;margin-top:20px;font-size:15px}
 #pv{position:fixed;left:0;right:0;bottom:0;background:var(--panel);border-top:1px solid var(--line);padding:10px 16px;display:flex;gap:18px;flex-wrap:wrap;justify-content:center;font-size:13px;color:var(--mute)}
@@ -84,16 +79,92 @@ ol.q{padding-left:22px;margin:18px 0 0}ol.q li{margin:8px 0}
 <button data-k="ex" data-v="list" aria-pressed="false">List</button></span></div>
 
 <script>
-/* The page is a template. Real use: days/day-01.json ... days/day-28.json, opened as ?day=1 */
+/* Real use: days/day-01.json ... days/day-28.json, opened as ?day=1
+   If the JSON file is missing, the SAMPLE below is shown instead. */
 
+const SAMPLE = {
+  day: 1,
+  total: 28,
+  minutes: 25,
+  title: "Түгдрэхгүй ярих",
+  context: "Яриаг түгдрэлгүй үргэлжлүүлэх хамгийн хялбар арга бол бодож байгаа үедээ чимээгүй суухын оронд богино хэллэгээр завсарлага авах. Өнөөдөр тийм хэллэгүүдийг сурна.",
+  video: "",
+  listen: {
+    lead: "Бичлэгийг хоёр удаа сонсоод доорх асуултад хариул.",
+    questions: [
+      "Anna юу хийхийг хүсэж байна вэ?",
+      "Tom яагаад шууд хариулж чадахгүй байна вэ?",
+      "Tom ямар хэллэгээр хугацаа авсан бэ?"
+    ],
+    transcript: [
+      ["Anna", "Hey Tom, are you free on Saturday?"],
+      ["Tom", "Hmm, let me think. Let me check my schedule."],
+      ["Tom", "Well, I have a lesson in the morning, but the afternoon is free."],
+      ["Anna", "Great! Let's meet at three."]
+    ]
+  },
+  phrases: [
+    ["Let me think.", "Би бодоод үзье.", "Хариулахаасаа өмнө хугацаа авах"],
+    ["Let me check.", "Би шалгаад үзье.", "Хуваарь, мэдээлэл шалгах үед"],
+    ["How can I put it?", "Яаж хэлэх вэ дээ?", "Зөв үг олохгүй байх үед"],
+    ["What I mean is...", "Миний хэлэх гэсэн нь...", "Өөрийгөө засаж тайлбарлах үед"],
+    ["Well, to be honest...", "Үнэнийг хэлэхэд...", "Өөрийн бодлыг хэлж эхлэх үед"],
+    ["Give me a second.", "Нэг секунд өгөөч.", "Богино завсарлага авах"]
+  ],
+  contrast: [
+    ["Let me think vs Let me check", [
+      ["Бодож байгаа үед", "Let me think."],
+      ["Мэдээлэл харах хэрэгтэй үед", "Let me check."]
+    ]],
+    ["Well vs Um", [
+      ["Хэлэх үгээ бэлдэж байгаа, сонсогдохуйц зөв", "Well, ..."],
+      ["Хэт олон давтвал тогтворгүй сонсогдоно", "Um... um..."]
+    ]]
+  ],
+  read: {
+    lead: "Tom болон Anna-гийн чатыг уншаад асуултад хариул.",
+    chat: [
+      ["Anna", "10:02", "Are you coming to the party tonight?"],
+      ["Tom", "10:03", "Hmm, let me think. What time does it start?"],
+      ["Anna", "10:03", "Around eight."],
+      ["Tom", "10:04", "Let me check my schedule. Give me a second."],
+      ["Tom", "10:05", "Well, to be honest, I have homework, but I can come late."]
+    ],
+    questions: [
+      "Party хэдэн цагт эхлэх вэ?",
+      "Tom яагаад шууд очно гэж хэлээгүй вэ?",
+      "Tom нийт хэдэн хэллэгээр завсарлага авсан бэ?"
+    ]
+  },
+  task: {
+    title: "Даалгавар",
+    lead: "Найз чинь танд ингэж бичлээ:",
+    message: "Hey! Do you want to go to the cinema this weekend? Which day is better for you?",
+    problems: [
+      "Та хариулахаасаа өмнө бага зэрэг бодох хэрэгтэй байна.",
+      "Та хуваариа шалгах хэрэгтэй байна.",
+      "Та нэг өдрийг сонгож, шалтгаанаа хэлэх хэрэгтэй байна."
+    ],
+    rules: [
+      "Өнөөдрийн хэллэгээс дор хаяж гурвыг ашигла.",
+      "Англиар бич, 4-6 өгүүлбэр.",
+      "Орчуулагч ашиглаж болохгүй."
+    ]
+  }
+};
 
 const $ = s => document.querySelector(s);
 const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 
 async function load(){
   const n = new URLSearchParams(location.search).get('day') || 1;
-  try{ const r = await fetch(`days/day-${String(n).padStart(2,'0')}.json`); if(!r.ok) throw 0; return await r.json(); }
-  catch(e){ return SAMPLE; }
+  try{
+    const r = await fetch(`days/day-${String(n).padStart(2,'0')}.json`);
+    if(!r.ok) throw 0;
+    return await r.json();
+  }catch(e){
+    return SAMPLE;
+  }
 }
 
 function render(d){
@@ -101,9 +172,12 @@ function render(d){
   const prev = d.day > 1 ? `<a href="?day=${d.day-1}">← Өдөр ${d.day-1}</a>` : '<span></span>';
   const next = d.day < d.total ? `<a href="?day=${d.day+1}">Өдөр ${d.day+1} →</a>` : '<span></span>';
   const strip = Array.from({length:d.total},(_,i)=>`<a href="?day=${i+1}" aria-label="Өдөр ${i+1}" class="${i+1<d.day?'done':i+1===d.day?'now':''}"></a>`).join('');
-  const steps = d.steps.map(s=>`<li data-s="${s[0]}"><input type="checkbox" id="c-${s[0]}" aria-label="${esc(s[1])}"><a href="#${s[0]}">${esc(s[1])}</a><span>${s[2]} мин</span></li>`).join('');
+
   const qs = a => `<ol class="q">${a.map(q=>`<li>${esc(q)}</li>`).join('')}</ol>`;
-  const video = d.video ? `<iframe src="https://www.youtube-nocookie.com/embed/${esc(d.video)}" allowfullscreen title="Сонсох бичлэг"></iframe>` : 'YouTube бичлэг энд гарна';
+  const video = d.video
+    ? `<iframe src="https://www.youtube-nocookie.com/embed/${esc(d.video)}" allowfullscreen title="Сонсох бичлэг"></iframe>`
+    : 'YouTube бичлэг энд гарна';
+
   $('#app').innerHTML = `
   <div class="top"><b>AnthonyTheSabakumono</b><span>${d.total} өдрийн хөтөлбөр</span></div>
   <nav class="strip" aria-label="Өдрүүд">${strip}</nav>
@@ -112,7 +186,6 @@ function render(d){
     <p class="sub">Өдөр ${d.day}/${d.total} · ойролцоогоор ${d.minutes} мин</p>
     <p class="ctx">${esc(d.context)}</p>
   </header>
-  <ul class="steps" aria-label="Өнөөдрийн алхмууд">${steps}</ul>
 
   <section id="listen"><h2>Сонсох</h2><p class="lead">${esc(d.listen.lead)}</p>
     <div class="video">${video}</div>${qs(d.listen.questions)}
@@ -132,27 +205,60 @@ function render(d){
     <p class="note">Дээрх хоёр хэсгийн хариултыг Discord дээр бичихгүй. Хариултын түлхүүр /submit хийсний дараа гарна.</p>
   </section>
 
-  <section id="task"><h2>${esc(d.task.title)}</h2>
-    <div class="task"><p style="margin:0">${esc(d.task.lead)}</p><blockquote>${esc(d.task.message)}</blockquote>
-      <p style="margin:0 0 4px">Танд гурван асуудал байна:</p><ul>${d.task.problems.map(p=>`<li>${esc(p)}</li>`).join('')}</ul>
-      <p style="margin:14px 0 4px">Хариугаа бичихдээ:</p><ul>${d.task.rules.map(p=>`<li>${esc(p)}</li>`).join('')}</ul>
-      <button class="btn" id="cp">Discord дээр /submit бичих</button>
-      <p class="note" id="cpn">Товч дарахад /submit командыг хуулна. Discord руу очоод буулгана.</p></div>
+  <section id="task">
+    <h2>${esc(d.task.title)}</h2>
+    <div class="task">
+      <p style="margin:0">${esc(d.task.lead)}</p>
+      <blockquote>${esc(d.task.message)}</blockquote>
+
+      <p style="margin:0 0 4px">Танд гурван асуудал байна:</p>
+      <ul>${d.task.problems.map(p=>`<li>${esc(p)}</li>`).join('')}</ul>
+
+      <p style="margin:14px 0 4px">Хариугаа бичихдээ:</p>
+      <ul>${d.task.rules.map(p=>`<li>${esc(p)}</li>`).join('')}</ul>
+
+      <textarea id="answer" class="answer"
+        placeholder="Энд хариултаа бичнэ үү..."
+        aria-label="Даалгаврын хариулт"></textarea>
+
+      <button class="btn" id="cp" type="button">Хариултаа хуулах</button>
+      <p class="note" id="cpn">Бичсэн хариултыг clipboard-д хуулна. Дараа нь Discord дээр /submit бичээд буулгана.</p>
+    </div>
   </section>
   <div class="nav">${prev}${next}</div>`;
 
-  // remember ticked steps in this browser only
-  const key = `day${d.day}`; let saved = {};
-  try{ saved = JSON.parse(localStorage.getItem(key)||'{}'); }catch(e){}
-  d.steps.forEach(s=>{ const li=$(`li[data-s=${s[0]}]`), cb=li.querySelector('input'); cb.checked=!!saved[s[0]]; li.classList.toggle('ok',cb.checked);
-    cb.addEventListener('change',()=>{ li.classList.toggle('ok',cb.checked); saved[s[0]]=cb.checked; try{localStorage.setItem(key,JSON.stringify(saved));}catch(e){} }); });
-  $('#cp').addEventListener('click',async()=>{ try{ await navigator.clipboard.writeText('/submit'); $('#cpn').textContent='Хуулагдлаа. Discord дээр буулгана уу.'; }catch(e){ $('#cpn').textContent='Discord дээр /submit гэж бичнэ.'; } });
+  const key = `day${d.day}`;
+
+  /* draft saving for the answer box */
+  const ta = $('#answer');
+  try{ ta.value = localStorage.getItem(key + '-answer') || ''; }catch(e){}
+  ta.addEventListener('input', () => {
+    try{ localStorage.setItem(key + '-answer', ta.value); }catch(e){}
+  });
+
+  /* copy button */
+  $('#cp').addEventListener('click', async () => {
+    const answer = ta.value;
+    if(!answer.trim()){
+      $('#cpn').textContent = 'Эхлээд хариултаа бичнэ үү.';
+      return;
+    }
+    try{
+      await navigator.clipboard.writeText(answer);
+      $('#cpn').textContent = 'Хариулт clipboard-д хуулагдлаа. Одоо Discord руу очоод /submit бичиж буулгана уу.';
+    }catch(e){
+      ta.focus();
+      ta.select();
+      $('#cpn').textContent = 'Хариултаа сонгоод гараар хуулна уу (Ctrl+C).';
+    }
+  });
 }
 
 document.querySelectorAll('#pv button').forEach(b=>b.addEventListener('click',()=>{
   document.documentElement.dataset[b.dataset.k]=b.dataset.v;
   document.querySelectorAll(`#pv button[data-k=${b.dataset.k}]`).forEach(x=>x.setAttribute('aria-pressed',x===b));
 }));
+
 load().then(render);
 </script>
 </body>
