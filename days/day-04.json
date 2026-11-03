@@ -1,0 +1,104 @@
+
+{
+  "day": 4,
+  "total": 28,
+  "minutes": 45,
+  "video": "",
+  "title": "Байгалийн асуулт асуух",
+  "topic": "Асуултыг ойлгож, нөхцөл байдалд тохирсон нэмэлт асуулт асуух",
+  "context": "Сайн яриа зөвхөн асуултад хариулахаас бүрддэггүй. Нөгөө хүнийхээ ярьсан зүйлд тохирсон нэмэлт асуулт асуух нь яриаг үргэлжлүүлж, илүү их мэдээлэл авахад тусалдаг. Өнөөдөр асуултын утгыг ойлгож, нөхцөл байдалд тохирсон байгалийн асуулт асууж сурна.",
+  "listen": {
+    "lead": "Дууг хоёр удаа сонсоод асуултад хариул. Бичлэгийг эхлээд харахгүй.",
+    "questions": [
+      "Why is Emma interested in joining the photography club?",
+      "When does the photography club usually meet?",
+      "Where are Daniel and the club members going next Saturday?",
+      "What does Daniel want to know when he asks, “Have you done much photography before?”"
+    ],
+    "transcript": [
+      ["Daniel", "Hey, are you joining any university clubs this semester?"],
+      ["Emma", "I'm thinking about joining the photography club. I saw some of their pictures online, and they looked amazing."],
+      ["Daniel", "Oh, nice! Have you done much photography before?"],
+      ["Emma", "Not really. I usually take pictures with my phone. What about you?"],
+      ["Daniel", "I've been a member for about a year. We usually meet every Wednesday afternoon."],
+      ["Emma", "That sounds interesting. What do you usually do during the meetings?"],
+      ["Daniel", "Sometimes we learn editing techniques, and sometimes we go outside to take pictures."],
+      ["Emma", "Really? Are you planning any trips soon?"],
+      ["Daniel", "Yes, we're going to the countryside next Saturday."],
+      ["Emma", "That sounds fun! Where exactly are you going?"],
+      ["Daniel", "To a small lake about an hour outside the city."],
+      ["Emma", "Nice! Can beginners join the trip too?"],
+      ["Daniel", "Of course. Everyone is welcome."]
+    ]
+  },
+  "phrases": [
+    ["What about you?", "Харин чи?", "Өөрийнхөө тухай ярьсны дараа нөгөө хүнээс асуух үед"],
+    ["How did you get into it?", "Чи яаж үүнийг сонирхож эхэлсэн бэ?", "Хүний сонирхол, хобби хэрхэн эхэлснийг асуух үед"],
+    ["What was it like?", "Ямар байсан бэ?", "Хүний туршлага, аялал, үйл явдлын талаар дэлгэрэнгүй асуух үед"],
+    ["How often do you ...?", "Чи хэр олон удаа ...?", "Давтамж, зуршлын талаар асуух үед"],
+    ["What do you mean by ...?", "... гэж юуг хэлж байна вэ?", "Хэлсэн зүйлийн утгыг тодруулах үед"],
+    ["Could you tell me more about ...?", "... талаар дэлгэрэнгүй ярьж өгч болох уу?", "Илүү их мэдээлэл авахыг хүсэх үед"],
+    ["Is it open to beginners?", "Анхлан суралцагчдад нээлттэй юу?", "Туршлагагүй хүн оролцож болох эсэхийг асуух үед"],
+    ["What happens next?", "Дараа нь юу болох вэ?", "Дараагийн алхам, үйл явцыг асуух үед"],
+    ["Where exactly ...?", "Яг хаана ...?", "Байршлыг илүү тодорхой мэдэхийг хүсэх үед"]
+  ],
+  "contrast": [
+    ["Ерөнхий сонирхол уу, туршлагын талаар асуух уу?", [
+      ["Хүнд ерөнхийдөө таалагддаг эсэхийг асуух", "Do you like photography?"],
+      ["Хэрхэн сонирхож эхэлснийг асуух", "How did you get interested in photography?"]
+    ]],
+    ["Ерөнхий асуулт уу, тодорхой асуулт уу?", [
+      ["Богино бөгөөд тодорхой бус", "Where?"],
+      ["Байршлыг тодорхой асуух", "Where exactly are you planning to go?"]
+    ]],
+    ["Шалтгаан асуух уу, илүү эелдэгээр тодруулах уу?", [
+      ["Шууд асуух", "Why?"],
+      ["Шалтгааныг илүү тодорхой асуух", "What made you choose that university?"]
+    ]],
+    ["Өмнөх мэдээллийг давтах уу, яриаг үргэлжлүүлэх үү?", [
+      ["Өмнө хэлсэн мэдээллийг давтан асуух", "You went to Japan?"],
+      ["Шинэ мэдээлэл авах асуулт асуух", "What was your favorite part of Japan?"]
+    ]]
+  ],
+  "read": {
+    "lead": "Найзуудын чат. Нэг удаа уншаад асуултад хариул.",
+    "chat": [
+      ["Nomin", "09:10", "Hey Anthony, how was your weekend?"],
+      ["Anthony", "09:11", "Pretty good! I went hiking with some friends."],
+      ["Nomin", "09:12", "Oh, nice! Where did you go?"],
+      ["Anthony", "09:13", "We went to Bogd Khan Mountain."],
+      ["Nomin", "09:14", "I've heard it's beautiful there. Was it difficult to hike?"],
+      ["Anthony", "09:15", "A little, especially near the top. But the view was worth it."],
+      ["Nomin", "09:16", "I can imagine. How long did it take you to get there?"],
+      ["Anthony", "09:17", "Around three hours, including breaks."],
+      ["Nomin", "09:18", "That's quite a trip! Do you go hiking often?"],
+      ["Anthony", "09:19", "Not really. It was my first time this year."],
+      ["Nomin", "09:20", "Would you recommend it to someone who's never been hiking before?"],
+      ["Anthony", "09:21", "Definitely. Just wear comfortable shoes and bring enough water."]
+    ],
+    "questions": [
+      "What did Anthony do during the weekend?",
+      "Where did Anthony go hiking?",
+      "What made the hike difficult?",
+      "How long did the trip take, including breaks?"
+    ]
+  },
+  "task": {
+    "title": "Яриагаа үргэлжлүүл",
+    "lead": "Шинэ оюутан танд ингэж бичжээ:",
+    "message": "Hey! I'm new to the university and I'm trying to find some interesting activities outside my classes. I heard there are student clubs, but I don't really know how they work. Have you joined any clubs? I'd love to hear about your experience.",
+    "problems": [
+      "Өөрийнхөө сонирхол эсвэл клубын туршлагын талаар хариулах",
+      "Ямар клуб сонирхож байгааг нь мэдэх",
+      "Клубын үйл ажиллагаа, уулзалт, оролцооны талаар илүү их мэдээлэл авах",
+      "Дор хаяж гурван холбоотой нэмэлт асуулт асуух"
+    ],
+    "rules": [
+      "30–100 үгтэй англиар бичнэ",
+      "Өнөөдрийн phrase хэсгээс дор хаяж хоёр хэллэг ашиглана",
+      "Асуултууд хоорондоо холбоотой, тухайн ярианд тохирсон байна",
+      "Жагсаалт шиг биш, бодит чат шиг байгалийн хэлээр бичнэ"
+    ]
+  }
+}
+

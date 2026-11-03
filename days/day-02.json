@@ -1,0 +1,108 @@
+
+{
+  "day": 2,
+  "total": 28,
+  "minutes": 45,
+  "video": "",
+  "title": "Өдөр тутмын амьдрал",
+  "topic": "Дадал зуршил болон яг одоо болж буй үйлдлийг ялгах",
+  "context": "Хүн бүр өдөр бүр хийдэг зүйлстэй. Гэхдээ бидний өдөр тутмын дадал зуршил болон яг одоо хийж байгаа үйлдэл хоёр өөр. Өнөөдөр Present Simple болон Present Continuous-ийн ялгааг ойлгож, өөрийн бодит өдөр тутмын амьдралыг англиар дүрслэн бичиж сурна.",
+  "steps": [
+    ["listen", "Сонсох", 10],
+    ["phrases", "Хэллэг", 10],
+    ["contrast", "Ялгаа", 5],
+    ["read", "Унших", 8],
+    ["task", "Бичих", 15]
+  ],
+  "listen": {
+    "lead": "Яриаг хоёр удаа сонс. Эхний удаа ерөнхий утгыг ойлго. Хоёр дахь удаа хүмүүсийн өдөр тутмын дадал болон яг одоо хийж байгаа үйлдлүүдийг анзаараарай.",
+    "questions": [
+      "What does Alex normally do before going to university?",
+      "Why is Alex taking the bus today?",
+      "What is Alex doing while talking to Emma?",
+      "What does Emma usually do after her classes?"
+    ],
+    "transcript": [
+      ["Emma", "Hey, Alex! Are you on your way to university?"],
+      ["Alex", "Yeah, I usually walk, but I'm taking the bus today."],
+      ["Emma", "Really? Why aren't you walking?"],
+      ["Alex", "It's raining, and I'm carrying some heavy books."],
+      ["Emma", "I see. What time do you usually leave home?"],
+      ["Alex", "Around eight. I normally have breakfast before I leave."],
+      ["Emma", "You're always so organized. I'm usually running late!"],
+      ["Alex", "Not always! I'm actually looking for my headphones right now."],
+      ["Emma", "Haha. Anyway, what do you usually do after classes?"],
+      ["Alex", "I often go to the library, but today I'm meeting a friend."],
+      ["Emma", "Sounds good. I'm studying at home this afternoon."],
+      ["Alex", "Nice. I'll message you later!"]
+    ]
+  },
+  "phrases": [
+    ["I usually ...", "Би ихэвчлэн ...", "Тогтмол хийдэг үйлдлээ хэлэхэд"],
+    ["I normally ...", "Би ер нь ...", "Ердийн дадал зуршлаа тайлбарлахад"],
+    ["I rarely ...", "Би бараг ... хийдэггүй.", "Ховор тохиолддог үйлдлээ хэлэхэд"],
+    ["I tend to ...", "Би ер нь ... хандлагатай.", "Давтагддаг зан төлөв, үйлдлээ хэлэхэд"],
+    ["Every now and then, ...", "Хааяа нэг ...", "Тогтмол биш ч үе үе хийдэг зүйлээ хэлэхэд"],
+    ["At the moment, ...", "Яг одоо ...", "Одоогийн нөхцөл байдлыг хэлэхэд"],
+    ["Right now, I'm ...", "Яг одоо би ... хийж байна.", "Одоо үргэлжилж буй үйлдлээ хэлэхэд"],
+    ["These days, I'm ...", "Сүүлийн үед би ... хийж байгаа.", "Ойрын хугацаанд үргэлжилж буй өөрчлөлт, үйлдлээ хэлэхэд"],
+    ["I'm trying to ...", "Би ... хийхийг хичээж байгаа.", "Одоогийн зорилго, хичээл зүтгэлээ хэлэхэд"]
+  ],
+  "contrast": [
+    ["Дадал зуршил уу, яг одоо юу?", [
+      ["Өдөр бүр өглөө 7 цагт босдог.", "I wake up at 7 every morning."],
+      ["Өнөөдөр өглөө 7 цагт босож байна.", "I'm waking up at 7 today."]
+    ]],
+    ["Ердийн үйлдэл үү, түр зуурын нөхцөл үү?", [
+      ["Би ихэвчлэн автобусаар явдаг.", "I usually take the bus."],
+      ["Өнөөдөр автобусаар явж байна.", "I'm taking the bus today."]
+    ]],
+    ["Хоёр цагийн ялгаа", [
+      ["Present Simple: давтагддаг үйлдэл, дадал зуршил.", "I study English every evening."],
+      ["Present Continuous: яг одоо эсвэл энэ үед үргэлжилж буй үйлдэл.", "I'm studying English right now."]
+    ]],
+    ["Түгээмэл анхаарах үгс", [
+      ["Usually, always, often, sometimes, rarely, every day.", "Present Simple"],
+      ["Now, right now, at the moment, currently, these days.", "Present Continuous"]
+    ]]
+  ],
+  "read": {
+    "lead": "Нэг оюутны өдөр тутмын амьдрал болон сүүлийн үеийн өөрчлөлтийн тухай унш.",
+    "chat": [
+      ["Munkh", "07:00", "I usually wake up at seven, but I sometimes stay in bed for another fifteen minutes. I make breakfast, check my messages, and get ready for university."],
+      ["Anthony", "07:06", "Do you always have breakfast at home?"],
+      ["Munkh", "07:07", "Almost always. I don't like buying food outside because it's expensive."],
+      ["Anthony", "07:08", "What about after university?"],
+      ["Munkh", "07:09", "I usually go home and study for a while. But these days, I'm spending more time on my English program."],
+      ["Anthony", "07:10", "Are you preparing for an exam?"],
+      ["Munkh", "07:11", "Not exactly. I'm trying to improve my speaking and writing skills."],
+      ["Anthony", "07:12", "That's interesting. I'm also working on my English these days."]
+    ],
+    "questions": [
+      "What time does Munkh usually wake up?",
+      "Why does Munkh prefer having breakfast at home?",
+      "What does Munkh normally do after university?",
+      "What is Munkh spending more time on these days?",
+      "Is Munkh preparing for an exam? What is his actual goal?",
+      "Find two examples of Present Simple and two examples of Present Continuous in the conversation."
+    ]
+  },
+  "task": {
+    "title": "Миний бодит өдөр тутмын амьдрал",
+    "lead": "Шинэ найз чинь чамайг илүү сайн танихыг хүсэж байна. Тэр ингэж бичжээ:",
+    "message": "Hey! I'd like to know more about you. What does a normal day look like for you? What do you usually do, and what are you working on these days?",
+    "problems": [
+      "Өдөр тутмынхаа бодит хуваарийг тайлбарлах",
+      "Тогтмол хийдэг зүйл болон хааяа хийдэг зүйлээ ялгах",
+      "Сүүлийн үед хийж байгаа эсвэл сурч байгаа зүйлээ танилцуулах"
+    ],
+    "rules": [
+      "30–80 үгтэй англиар бичнэ",
+      "Present Simple ашиглан өдөр тутмын дадал зуршлаа тайлбарла",
+      "Present Continuous ашиглан яг одоо эсвэл сүүлийн үед хийж байгаа зүйлээ бич",
+      "Usually, often, sometimes, rarely зэрэг давтамжийн үгсээс дор хаяж 3-ыг ашигла",
+      "Өөрийн бодит амьдралыг бич. Зохиомол төгс хуваарь хэрэггүй",
+      "Эцэст нь найзаасаа өдөр тутмын амьдралынх нь талаар нэг асуулт асуу"
+    ]
+  }
+}

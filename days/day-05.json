@@ -1,0 +1,76 @@
+{
+  "day": 5,
+  "total": 28,
+  "minutes": 45,
+  "video": "",
+  "title": "Тоо, огноо, цаг ба үнэ",
+  "topic": "Сонссон практик мэдээллийг ойлгож, дэлгэрэнгүйг үнэн зөв баталгаажуулах",
+  "context": "Үнэ, цаг, огноо, дугаар зэрэг тодорхой мэдээллийг сонсож ойлгох нь өдөр тутмын харилцаанд маш чухал. Энэ хичээлээр тоо ба цаг агуулсан мэдээллийг сонсон, буруу ойлгохоос сэргийлж хэрхэн дахин шалгаж баталгаажуулах хэллэгүүдийг сурна.",
+  "listen": {
+    "lead": "Яриаг хоёр удаа сонсоод асуултад хариул. Бичлэгийг эхлээд харахгүй.",
+    "questions": [
+      "What date does Clara want to travel?",
+      "What time is the morning train departure?",
+      "How much does a single standard ticket cost?",
+      "What is the total price for both tickets?",
+      "How does Clara double-check and confirm her booking details with the agent?"
+    ],
+    "transcript": [
+      ["Agent", "Good morning! City Express Travel. How can I help you?"],
+      ["Clara", "Hi! I'd like to book two train tickets to Manchester for next Tuesday, November 10th."],
+      ["Agent", "Sure! We have a morning departure at 08:15 and an afternoon one at 14:30."],
+      ["Clara", "The 08:15 train sounds good. How much is that per person?"],
+      ["Agent", "Standard tickets are £32.50 each, so the total comes to £65.00."],
+      ["Clara", "Great. So that's two standard tickets for Tuesday the 10th at 8:15 AM, total £65.00?"],
+      ["Agent", "That is correct! What name should I put on the reservation?"]
+    ]
+  },
+  "phrases": [
+    ["How much is it per person?", "Нэг хүний хэд вэ?", "Нэгжийн үнийг асуух үед"],
+    ["The total comes to...", "Нийт дүн нь... болж байна.", "Нийт үнийг хэлэх эсвэл сонсох үед"],
+    ["So that's [details], right?", "Тэгэхээр [дэлгэрэнгүй мэдээлэл], тийм үү?", "Сонссон мэдээллээ нэг бүрчлэн баталгаажуулах үед"],
+    ["Is that AM or PM?", "Үдээс өмнө үү, үдээс хойш уу?", "Цаг тодорхойгүй үед тодруулах үед"],
+    ["Could you confirm the price?", "Үнийг нь дахин баталгаажуулж өгөх үү?", "Үнэн дүнг шалгах үед"],
+    ["Did you say [number] or [number]?", "[Тоо] гэж хэлсэн үү, эсвэл [тоо] гэв үү?", "Сонссон тоогоо эргэлзэж байх үед (жишээ нь: 15 эсвэл 50)"],
+    ["Let me write that down.", "Тэрийг тэмдэглээд авъя.", "Чухал огноо, цагийг тэмдэглэх хугацаа авах үед"],
+    ["That is correct.", "Тэр зөв байна.", "Мэдээлэл зөв гэдгийг баталж хэлэх үед"]
+  ],
+  "contrast": [
+    ["Үнэ асуух уу, баталгаажуулах уу?", [["Нэг хүний үнийг мэдээгүй үед", "How much is it per person?"], ["Нийт дүнг зөв сонссоноо шалгах үед", "So the total comes to £65.00, right?"]]],
+    ["Тоо сонссоноо шалгах уу, цаг тодруулах уу?", [["Сонссон тоондоо эргэлзэх үед", "Did you say 15 or 50?"], ["Өглөө, оройн цаг болохыг тодруулах үед", "Is that 8:15 AM or PM?"]]],
+    ["Тэмдэглэл хийх үед үү, шууд зөвшөөрөх үед үү?", [["Мэдээллийг бичиж авах хугацаа авах үед", "Let me write that down."], ["Нөгөө хүний хэлсэн мэдээлэл яг зөв байх үед", "That is correct."]]]
+  ],
+  "read": {
+    "lead": "Найзуудын чат. Нэг удаа уншаад асуултад хариул.",
+    "chat": [
+      ["Batu", "14:00", "Hey Anthony! Are you going to the digital design workshop this Friday?"],
+      ["Anthony", "14:02", "Yes! It starts at 15:45, right?"],
+      ["Batu", "14:03", "Actually, they changed it. It begins at 16:15 and finishes at 18:00."],
+      ["Anthony", "14:05", "Ah, thanks for telling me! Is the registration fee still 25,000 MNT?"],
+      ["Batu", "14:06", "Yes, 25,000 MNT if you pay today, but it's 30,000 MNT at the door."],
+      ["Anthony", "14:07", "Got it. So 4:15 PM start time and 25k online. I'll pay right now!"]
+    ],
+    "questions": [
+      "What time does the workshop actually start and finish?",
+      "What details did Batu correct about the workshop's schedule?",
+      "Why does Anthony decide to pay for the registration fee right now",
+      "How does Anthony double-check and confirm the final details with Batu"
+    ]
+  },
+  "task": {
+    "title": "Уулзалтын цаг, үнийн мэдээллийг баталгаажуул",
+    "lead": "Найз чинь танд ингэж бичжээ:",
+    "message": "Hey! I got us tickets for the show next week. It's on the 15th around 7 PM. They cost about 45 dollars each. Let's meet early!",
+    "problems": [
+      "Тодорхой гарагийг тодруулах (15-ны өдөр ямар гараг вэ)",
+      "Суудлын үнэ яг 45 доллар уу, нийт дүн хэд болохыг асуух",
+      "Хэдэн цагт, яг хаана эрт уулзахаа тодорхой болгох"
+    ],
+    "rules": [
+      "30–100 үгтэй англиар бичнэ",
+      "Эелдэг, байгалийн хэлээр бичнэ",
+      "Огноо, цаг, үнийг нягталж асууна",
+      "Эцэст нь мэдээллийг тодорхой болмогц тооцоогоо хийнэ гэж хэлнэ"
+    ]
+  }
+}

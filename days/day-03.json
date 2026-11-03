@@ -1,0 +1,105 @@
+
+{
+  "day": 3,
+  "total": 28,
+  "minutes": 45,
+  "video": "",
+  "title": "Дэлгэрэнгүй тайлбарлах",
+  "topic": "Хүн, газар, эд зүйлсийг дүрслэн тайлбарлах",
+  "context": "Хэн нэгэнд хүн, газар эсвэл эд зүйлсийн талаар тайлбарлахдаа зөвхөн нэрийг нь хэлэх хангалтгүй. Гадаад төрх, онцлог, байршил, зориулалт зэрэг чухал мэдээллийг ойлгомжтой хүргэх хэрэгтэй. Өнөөдөр хэрэгтэй мэдээллийг ялгаж, тодорхой бөгөөд байгалийн англи хэлээр дүрслэн бичиж сурна.",
+  "listen": {
+    "lead": "Яриаг хоёр удаа сонс. Хүмүүсийн дүр төрх, газар орны байршил болон онцлог шинжүүдийг анзаараарай.",
+    "questions": [
+      "What does the new café look like?",
+      "Where exactly is the café located?",
+      "What makes the café easy to recognize?",
+      "What is the woman wearing, and what does she look like?",
+      "What item is the woman carrying?"
+    ],
+    "transcript": [
+      ["Alex", "Hey, have you found the new café near the university?"],
+      ["Mia", "Yes! It's a small place on Green Street, right across from the bookstore."],
+      ["Alex", "What does it look like?"],
+      ["Mia", "It's a cozy café with large windows and wooden tables. There's a small garden outside, too."],
+      ["Alex", "Sounds nice. Is it easy to find?"],
+      ["Mia", "Definitely. It has a bright yellow sign above the entrance."],
+      ["Alex", "Great. I'm also looking for Sarah. Have you seen her?"],
+      ["Mia", "I think so. Is she the tall girl with short brown hair?"],
+      ["Alex", "Yes, that's her!"],
+      ["Mia", "She's wearing a blue jacket and carrying a black backpack."],
+      ["Alex", "Perfect. I'll look for her near the café. Thanks!"],
+      ["Mia", "No problem. Hope you find her."]
+    ]
+  },
+  "phrases": [
+    ["He/She looks ...", "Тэр ... харагддаг.", "Хүний гадаад төрх, харагдах байдлыг дүрслэхэд"],
+    ["He/She has ...", "Тэр ...-тай.", "Үс, нүд болон бусад онцлогийг тайлбарлахад"],
+    ["He/She is wearing ...", "Тэр ... өмссөн байна.", "Хүний тухайн үеийн хувцсыг хэлэхэд"],
+    ["It is located ...", "Энэ нь ... байрладаг.", "Газар орны байршлыг тайлбарлахад"],
+    ["It is known for ...", "Энэ нь ...-аараа алдартай.", "Тухайн газрын онцлогийг хэлэхэд"],
+    ["It is made of ...", "Энэ нь ...-аар хийгдсэн.", "Эд зүйлсийн материалыг тайлбарлахад"],
+    ["It is used for ...", "Үүнийг ...-д ашигладаг.", "Эд зүйлсийн зориулалтыг хэлэхэд"],
+    ["It has ...", "Энэ нь ...-тай.", "Газар, эд зүйлсийн шинж чанарыг хэлэхэд"],
+    ["You can recognize it by ...", "Та үүнийг ...-аар нь таньж болно.", "Танихад туслах онцлогийг тайлбарлахад"]
+  ],
+  "contrast": [
+    ["Гадаад төрх ба хувцаслалт", [
+      ["Түүний урт хар үстэй.", "She has long black hair."],
+      ["Тэр хар хүрэм өмссөн байна.", "She is wearing a black jacket."]
+    ]],
+    ["Ерөнхий байршил ба тодорхой байршил", [
+      ["Кафе их сургуулийн ойролцоо байдаг.", "The café is near the university."],
+      ["Кафе номын дэлгүүрийн яг эсрэг талд байдаг.", "The café is right across from the bookstore."]
+    ]],
+    ["Тайлбар ба зориулалт", [
+      ["Энэ бол жижиг төмөр төхөөрөмж.", "It's a small metal device."],
+      ["Энэ төхөөрөмжийг температурыг хэмжихэд ашигладаг.", "It's used for measuring temperature."]
+    ]],
+    ["Тодорхой ба хэрэгтэй тайлбар", [
+      ["Тэр нэг цүнхтэй.", "He has a bag."],
+      ["Тэр хар үүргэвч үүрсэн бөгөөд урд талдаа жижиг лого бүхий.", "He's carrying a black backpack with a small logo on the front."]
+    ]]
+  ],
+  "read": {
+    "lead": "Найздаа шинэ газар болон хайж байгаа хүнийхээ талаар тайлбарлаж буй мессежүүдийг унш.",
+    "chat": [
+      ["Enkh", "16:20", "Hey, I'm at the shopping center. Where is the new bookstore?"],
+      ["Anthony", "16:21", "It's on the second floor, next to the electronics store."],
+      ["Enkh", "16:22", "What does it look like? I can't see it."],
+      ["Anthony", "16:23", "It's quite large. The entrance has a dark green frame, and there are books displayed in the front window."],
+      ["Enkh", "16:24", "Oh, I see it now. Are you already there?"],
+      ["Anthony", "16:25", "Not yet. I'm looking for a birthday gift. There's a small wooden desk lamp I'm interested in."],
+      ["Enkh", "16:26", "What does it look like?"],
+      ["Anthony", "16:27", "It's made of light-colored wood, with a round base and a white lampshade. It's simple but looks elegant."],
+      ["Enkh", "16:28", "Sounds good. I'll meet you at the bookstore entrance."],
+      ["Anthony", "16:29", "Great. I'll be wearing a red sweater and carrying a gray handbag."]
+    ],
+    "questions": [
+      "Which floor is the bookstore on?",
+      "Where is the bookstore located in relation to the electronics store?",
+      "What two details help Enkh recognize the bookstore?",
+      "What does the desk lamp look like?",
+      "What is Sara wearing and carrying?",
+      "Which details would help someone find Anthony without knowing her personally?"
+    ]
+  },
+  "task": {
+    "title": "Найздаа газар болон хүнээ тайлбарла",
+    "lead": "Чиний найз шинэ хотод иржээ. Тэр чамтай уулзахыг хүсэж байгаа боловч та хоёр яг хаана уулзахаа шийдээгүй байна. Найз чинь ингэж бичжээ:",
+    "message": "Hey! I'm new to this area, so I don't know many places yet. Can you recommend somewhere easy to find? Also, how will I recognize you when I get there?",
+    "problems": [
+      "Уулзахад тохиромжтой нэг газар сонгох",
+      "Тухайн газрын байршил болон танихад туслах онцлогийг тайлбарлах",
+      "Өөрийн гадаад төрх болон өмссөн хувцсаа дүрслэх"
+    ],
+    "rules": [
+      "30–100 үгтэй англиар бичнэ",
+      "Газар орны байршлыг тодорхой тайлбарла",
+      "Хамгийн багадаа гурван дүрслэх тэмдэг нэр ашигла",
+      "Өөрийн гадаад төрх болон тухайн үеийн хувцаслалтыг ялгаж бич",
+      "Танихад туслах бодит мэдээлэл оруул",
+      "Эцэст нь уулзах газраа баталгаажуул"
+    ]
+  }
+}
+

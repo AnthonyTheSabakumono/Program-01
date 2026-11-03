@@ -1,0 +1,104 @@
+
+{
+  "day": 6,
+  "total": 28,
+  "minutes": 45,
+  "video": "",
+  "title": "Эелдэгээр хүсэлт тавих",
+  "topic": "Нөхцөл байдалд тохирсон хүсэлт, санал, эелдэг хариулт сонгох",
+  "context": "Өдөр тутмын харилцаанд хүсэлт тавих, тусламж санал болгох, хүсэлтэд хариулах шаардлага байнга гардаг. Гэхдээ найзтайгаа болон багш, танихгүй хүнтэй ярихдаа ижил хэллэг хэрэглэх нь тохиромжгүй байж болно. Өнөөдөр нөхцөл байдалд тохирсон эелдэг хэллэг сонгож сурна.",
+  "listen": {
+    "lead": "Дууг хоёр удаа сонсоод асуултад хариул. Бичлэгийг эхлээд харахгүй.",
+    "questions": [
+      "What does Lucy ask Mark to help her with?",
+      "Why can't Mark help Lucy immediately?",
+      "What does Mark offer to do instead?",
+      "How does Lucy respond to Mark's offer?"
+    ],
+    "transcript": [
+      ["Lucy", "Hey Mark, could you help me carry these boxes to the classroom?"],
+      ["Mark", "Sure, I'd be happy to. Where do you need them?"],
+      ["Lucy", "Just to the room next to the library, please."],
+      ["Mark", "No problem. Give me a minute, though. I need to send this email first."],
+      ["Lucy", "Of course. Take your time."],
+      ["Mark", "Actually, would you like me to bring the smaller boxes too?"],
+      ["Lucy", "That would be great, thanks."],
+      ["Mark", "You're welcome. We can take everything together."],
+      ["Lucy", "Thanks, I really appreciate your help."],
+      ["Mark", "Don't mention it. Happy to help."]
+    ]
+  },
+  "phrases": [
+    ["Could you ...?", "... хийж өгч болох уу?", "Эелдэгээр хүсэлт тавих үед"],
+    ["Would you mind ...?", "... хийхэд татгалзахгүй биз?", "Илүү эелдэг хүсэлт тавих үед"],
+    ["Could you possibly ...?", "Боломжтой бол ... хийж өгч болох уу?", "Илүү зөөлөн, эелдэг хүсэлт тавих үед"],
+    ["Would you like me to ...?", "Би ... хийж өгөх үү?", "Тусламж санал болгох үед"],
+    ["Can I give you a hand?", "Би туслах уу?", "Хэн нэгэнд тусламж санал болгох үед"],
+    ["I'd be happy to.", "Тэгэлгүй яах вэ.", "Хүсэлтийг дуртайяа хүлээн авах үед"],
+    ["I'm afraid I can't.", "Харамсалтай нь чадахгүй нь.", "Эелдгээр татгалзах үед"],
+    ["That would be great.", "Тэгвэл маш сайн байна.", "Санал, тусламжийг хүлээн авах үед"],
+    ["I really appreciate it.", "Би үнэхээр талархаж байна.", "Тусалсан хүнд талархах үед"],
+    ["No worries.", "Зүгээр дээ.", "Талархалд энгийн, найрсгаар хариулах үед"]
+  ],
+  "contrast": [
+    ["Шууд хүсэх үү, эелдэгээр хүсэх үү?", [
+      ["Шууд тушаасан мэт сонсогдож болно", "Send me the file."],
+      ["Эелдэг хүсэлт", "Could you send me the file?"]
+    ]],
+    ["Энгийн хүсэлт үү, илүү зөөлөн хүсэлт үү?", [
+      ["Энгийн эелдэг хүсэлт", "Can you open the window?"],
+      ["Илүү зөөлөн хүсэлт", "Would you mind opening the window?"]
+    ]],
+    ["Тусламж хүсэх үү, санал болгох уу?", [
+      ["Өөрөөсөө тусламж хүсэх", "Could you help me with this?"],
+      ["Өөрөө туслах санал тавих", "Would you like me to help you with this?"]
+    ]],
+    ["Шууд татгалзах уу, эелдгээр татгалзах уу?", [
+      ["Шууд татгалзах", "No, I can't."],
+      ["Эелдэг татгалзах", "I'm afraid I can't. I'm busy at the moment."]
+    ]],
+    ["Санал хүлээн авах уу, татгалзах уу?", [
+      ["Саналыг хүлээн авах", "That would be great, thank you."],
+      ["Саналаас эелдгээр татгалзах", "That's very kind of you, but I'm okay."]
+    ]]
+  ],
+  "read": {
+    "lead": "Найзуудын чат. Нэг удаа уншаад асуултад хариул.",
+    "chat": [
+      ["Sara", "10:20", "Hi Tom, could you send me the notes from yesterday's lecture? I couldn't attend."],
+      ["Anthony", "10:22", "Of course. I'll send you the photos in a minute."],
+      ["Sara", "10:23", "Thanks! Would you mind explaining the last topic too? I found it a little confusing."],
+      ["Anthony", "10:25", "Not at all. I can explain it after class if you want."],
+      ["Sara", "10:26", "That would be really helpful. Are you free around 2?"],
+      ["Anthony", "10:27", "I'm afraid I can't at 2. I have a meeting with my project team."],
+      ["Sara", "10:28", "No problem. What about 3:30?"],
+      ["Anthony", "10:29", "That works for me. Let's meet at the library."],
+      ["Sara", "10:30", "Perfect. I really appreciate your help!"],
+      ["Anthony", "10:31", "You're welcome. See you then."]
+    ],
+    "questions": [
+      "Why does Sara ask Anthony to send her the lecture notes?",
+      "What does Sara ask Anthony to explain?",
+      "Why can't Anthony meet Sara at 2?",
+      "When and where do they decide to meet?"
+    ]
+  },
+  "task": {
+    "title": "Хүсэлтэд эелдгээр хариул",
+    "lead": "Танай ангийн найз танд ингэж бичжээ:",
+    "message": "Hey! I'm having trouble finishing our group presentation. Could you check my slides and give me some feedback tonight? Also, would you be able to help me practice before tomorrow's presentation?",
+    "problems": [
+      "Слайдуудыг шалгаж өгөх боломжтой эсэхээ хэлэх",
+      "Маргаашийн илтгэлд бэлдэхэд туслах боломжоо тайлбарлах",
+      "Боломжгүй зүйл байвал эелдгээр татгалзаж, өөр хувилбар санал болгох",
+      "Найзынхаа хүсэлтэд тохирсон хариулт өгөх"
+    ],
+    "rules": [
+      "30–100 үгтэй англиар бичнэ",
+      "Өнөөдрийн phrase хэсгээс дор хаяж гурван хэллэг ашиглана",
+      "Хүсэлт, санал, татгалзлыг нөхцөл байдалд тохируулна",
+      "Бодит найздаа бичиж байгаа мэт байгалийн хэлээр бичнэ"
+    ]
+  }
+}
+
