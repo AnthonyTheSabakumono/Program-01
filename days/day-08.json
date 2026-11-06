@@ -1,0 +1,93 @@
+{
+  "day": 8,
+  "total": 28,
+  "minutes": 45,
+  "title": "Бараа сонгох, харьцуулах",
+  "context": "Дэлгүүрт эсвэл онлайнаар бараа сонгохдоо хоёр сонголтыг харьцуулж, дутуу мэдээллийг асууж чаддаг байх нь маш хэрэгтэй. Өнөөдөр ялгааг асуух, шинж чанарыг харьцуулах, мэдэхгүй зүйлээ тодруулах хэллэгүүдийг сурна.",
+  "blocks": [
+    {
+      "type": "listen",
+      "title": "Сонсох",
+      "lead": "Яриаг хоёр удаа сонсоод асуултад хариул. Бичлэгийг эхлээд харахгүй.",
+      "video": "",
+      "questions": [
+        "How much is each backpack?",
+        "What is the difference between the two backpacks?",
+        "What does Nara ask about the black backpack after she hears the difference?",
+        "Which backpack does Nara choose, and why?"
+      ],
+      "transcript": [
+        ["Assistant", "Hello! Can I help you?"],
+        ["Nara", "Hi! I'm looking for a backpack for university."],
+        ["Assistant", "Sure. We have two popular ones. This grey one is 85,000 MNT, and the black one is 120,000."],
+        ["Nara", "What's the difference between them?"],
+        ["Assistant", "The black one is bigger and has a laptop pocket. The grey one is lighter, but it's smaller."],
+        ["Nara", "Is the black one waterproof?"],
+        ["Assistant", "Yes, it is. The grey one isn't."],
+        ["Nara", "Does the black one come with a warranty?"],
+        ["Assistant", "Yes, one year. The grey one only has six months."],
+        ["Nara", "Hmm. The black one is more expensive, but it's better for my laptop and the rain. Which colours is it available in?"],
+        ["Assistant", "Black and dark blue."],
+        ["Nara", "I'd go with the black one, please."]
+      ]
+    },
+    {
+      "type": "phrases",
+      "title": "Хэллэг",
+      "items": [
+        ["What's the difference between A and B?", "А ба Б хоёрын ялгаа юу вэ?", "Хоёр сонголтыг харьцуулахыг хүсэх үед"],
+        ["Which one is better for ...?", "... -д аль нь дээр вэ?", "Өөрийн зорилгод аль нь тохирохыг асуух үед"],
+        ["Is it available in blue / in a larger size?", "Цэнхэр өнгөтэй / илүү том хэмжээтэй нь байдаг уу?", "Өөр өнгө, хэмжээ байгаа эсэхийг асуух үед"],
+        ["Does it come with a charger?", "Цэнэглэгч дагалдаж ирдэг үү?", "Дагалдах зүйл, баталгаа байгаа эсэхийг асуух үед"],
+        ["How long is the warranty?", "Баталгаа хэр удаан вэ?", "Баталгааны хугацааг асуух үед"],
+        ["A is cheaper than B, but ...", "А нь Б-ээс хямд, гэхдээ ...", "Хоёр зүйлийг харьцуулан хэлэх үед"],
+        ["I'm still not sure. Could you tell me more about ...?", "Би одоо ч эргэлзэж байна. ...-ийн талаар дэлгэрэнгүй хэлж өгөөч?", "Мэдээлэл дутуу, эргэлзэж байх үед"],
+        ["I'd go with ...", "Би ...-г сонгоё.", "Шийдвэрээ эелдгээр хэлэх үед"]
+      ]
+    },
+    {
+      "type": "contrast",
+      "title": "Ялгаа",
+      "items": [
+        ["Ялгааг асуух уу, аль нь дээр гэж асуух уу?", [["Хоёр бүтээгдэхүүний ялгааг мэдэхгүй үед", "What's the difference between them?"], ["Өөрийн хэрэгцээнд аль нь тохирохыг мэдэх үед", "Which one is better for university?"]]],
+        ["Байгаа эсэхийг асуух уу, дагалдах зүйлийг асуух уу?", [["Өөр өнгө, хэмжээ байгаа эсэхийг мэдэх үед", "Is it available in blue?"], ["Баталгаа, цэнэглэгч дагалдаж ирэх эсэхийг мэдэх үед", "Does it come with a charger?"]]],
+        ["Харьцуулах уу, шийдвэрээ хэлэх үү?", [["Хоёр зүйлийн үнэ, чанарыг харьцуулах үед", "It's cheaper than the other one, but it's smaller."], ["Нэгийг нь сонгосноо хэлэх үед", "I'd go with the black one, please."]]]
+      ]
+    },
+    {
+      "type": "read",
+      "title": "Унших",
+      "lead": "Өдрийн тэмдэглэлийг нэг удаа уншаад асуултад хариул.",
+      "articleTitle": "Diary — Saturday, 14 November",
+      "paragraphs": [
+        "I want to buy new headphones for studying, so today I compared two models online. The first one costs 90,000 MNT. It's light and the battery lasts 30 hours, but it doesn't have a microphone. The second one costs 140,000 MNT. It's heavier, but it has a good microphone and cancels noise.",
+        "I like the second one more, but it's expensive. The seller didn't say if it comes with a case or how long the warranty is. I also don't know if I can return it after three days.",
+        "Tomorrow I'll message the seller and ask about these things. If the warranty is one year, I'll probably buy the second pair."
+      ],
+      "questions": [
+        "Why is the writer comparing two models of headphones?",
+        "How are the two headphones different?",
+        "What information is missing from the seller's page?",
+        "What will the writer do tomorrow, and what will make them buy the second pair?"
+      ]
+    },
+    {
+      "type": "task",
+      "title": "Дутуу мэдээллийг асууж, сонголтоо харьцуул",
+      "lead": "Та онлайнаар хэрэглэсэн зөөврийн компьютер хайж байна. Худалдагч ийм зар тавьжээ:",
+      "message": "Used laptop for sale. 8 GB RAM, 256 GB SSD. 800,000 MNT. Good condition. Message me.",
+      "problemsLabel": "Та дараах зүйлийг хийх хэрэгтэй:",
+      "problems": [
+        "Батерей хэр удаан ажилладаг, цэнэглэгч дагалдаж ирэх эсэхийг асуух",
+        "Өөр нэг зөөврийн компьютер 700,000 MNT бөгөөд батерей нь шинэ гэдгийг дурдаж, үнийг харьцуулах",
+        "Баталгаа эсвэл буцаах боломж байгаа эсэхийг асуух"
+      ],
+      "rules": [
+        "30–100 үгтэй англиар бичнэ",
+        "Эелдэг, байгалийн хэлээр бичнэ",
+        "Нэг зүйлийг нөгөөтэй нь харьцуулж, дутуу мэдээллээ тодорхой асууна",
+        "Эцэст нь мэдээллээ авсныхаа дараа шийдвэрээ хэлнэ гэж бичнэ"
+      ]
+    }
+  ]
+}

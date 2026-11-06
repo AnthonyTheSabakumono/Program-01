@@ -1,0 +1,48 @@
+{
+  "day": 7,
+  "total": 28,
+  "minutes": 45,
+  "title": "1-р долоо хоногийн шалгалт",
+  "context": "Энэ долоо хоногт сурсан зүйлээ шинэ даалгавруудаар шалгана. Өнөөдөр хичээлийн тэмдэглэл байхгүй: сонсож, уншиж, бичээд өөрийнхөө ахицыг хар.",
+  "blocks": [
+    {
+      "type": "listen",
+      "title": "Шинэ яриа сонсох",
+      "lead": "Яриаг хоёр удаа сонсоод асуултад хариул. Бичлэгийг эхлээд харахгүй.",
+      "video": "",
+      "questions": [
+        "What does Anna want to buy?",
+        "What does the shop assistant ask her to repeat?",
+        "How does Anna check the price?"
+      ],
+      "transcript": [
+        ["Anna", "Hi! Do you have this notebook in blue?"],
+        ["Assistant", "Yes, we do. It's four ninety-five."],
+        ["Anna", "Sorry, did you say fourteen ninety-five or four ninety-five?"],
+        ["Assistant", "Four ninety-five. It's on sale today."]
+      ]
+    },
+    {
+      "type": "read",
+      "title": "Имэйл унших",
+      "lead": "Имэйлийг нэг удаа уншаад асуултад хариул.",
+      "paragraphs": [
+        "Hi Ben, I'm writing about Friday. The meeting is at the library, not at the school. It starts at four thirty, not four. Please bring your laptop. See you there! Maria"
+      ],
+      "questions": [
+        "Where is the meeting?",
+        "What time does it start?",
+        "What should Ben bring?"
+      ]
+    },
+    {
+      "type": "task",
+      "title": "Бичих даалгавар",
+      "lead": "Найз чинь танд ингэж бичжээ:",
+      "message": "Let's meet tomorrow at the café near the station at six.",
+      "problemsLabel": "Та дараах зүйлийг тодруулах хэрэгтэй:",
+      "problems": ["Аль кафе вэ", "Өглөөний 6 уу, оройн 6 уу"],
+      "rules": ["30–100 үгтэй англиар бичнэ", "Эелдэг, байгалийн хэлээр бичнэ", "Ойлгоогүй зүйлээ ойлгосон дүр үзүүлэхгүй"]
+    }
+  ]
+}
