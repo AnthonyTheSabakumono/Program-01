@@ -10,10 +10,10 @@
   "listen": {
     "lead": "Дууг хоёр удаа сонсоод асуултад хариул. Бичлэгийг эхлээд харахгүй.",
     "questions": [
-      "What does Lucy ask Mark to help her with?",
-      "Why can't Mark help Lucy immediately?",
-      "What does Mark offer to do instead?",
-      "How does Lucy respond to Mark's offer?"
+      "What does The women ask The male to help her with?",
+      "Why can't the male help Lucy immediately?",
+      "What does the male offer to do instead?",
+      "How does the women respond to his offer?"
     ],
     "transcript": [
       ["Lucy", "Hey Mark, could you help me carry these boxes to the classroom?"],
