@@ -10,10 +10,10 @@
   "listen": {
     "lead": "Дууг хоёр удаа сонсоод асуултад хариул. Бичлэгийг эхлээд харахгүй.",
     "questions": [
-      "Why is Emma interested in joining the photography club?",
+      "Why is Women interested in joining the photography club?",
       "When does the photography club usually meet?",
-      "Where are Daniel and the club members going next Saturday?",
-      "What does Daniel want to know when he asks, “Have you done much photography before?”"
+      "Where are Male and the club members going next Saturday?",
+      "What does Male want to know when he asks, “Have you done much photography before?”"
     ],
     "transcript": [
       ["Daniel", "Hey, are you joining any university clubs this semester?"],
