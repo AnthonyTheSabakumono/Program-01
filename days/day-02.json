@@ -10,10 +10,10 @@
   "listen": {
     "lead": "Яриаг хоёр удаа сонс. Эхний удаа ерөнхий утгыг ойлго. Хоёр дахь удаа хүмүүсийн өдөр тутмын дадал болон яг одоо хийж байгаа үйлдлүүдийг анзаараарай.",
     "questions": [
-      "What does Alex normally do before going to university?",
-      "Why is Alex taking the bus today?",
-      "What is Alex doing while talking to Emma?",
-      "What does Emma usually do after her classes?"
+      "What does He normally do before going to university?",
+      "Why is He taking the bus today?",
+      "What is He doing while talking to her?",
+      "What does She usually do after her classes?"
     ],
     "transcript": [
       ["Emma", "Hey, Alex! Are you on your way to university?"],
