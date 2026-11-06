@@ -65,6 +65,10 @@ ol.q{padding-left:22px;margin:18px 0 0}ol.q li{margin:8px 0}
 .btn{display:inline-block;margin-top:18px;background:var(--gold);color:var(--gold-ink);border:0;border-radius:8px;padding:12px 20px;font:500 16px var(--sans);cursor:pointer}
 .nav{display:flex;justify-content:space-between;margin-top:20px;font-size:15px}
 .err{margin:60px 0;padding:20px;border:1px solid var(--line);border-radius:10px;background:var(--panel);color:var(--mute)}
+.passage{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px 20px}
+.art{font:400 22px/1.3 var(--serif);margin:0 0 12px}
+.passage p{margin:0 0 14px}.passage p:last-child{margin:0}
+.bul{margin:12px 0 0;padding-left:22px}.bul li{margin:6px 0}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
 </head>
@@ -89,52 +93,83 @@ async function load(n){
   return r.json();
 }
 
-const SECTIONS = {
-  listen: (d, label) => {
-    const L = d.listen, v = d.video;
-    const video = v ? `<iframe src="https://www.youtube-nocookie.com/embed/${esc(v)}" allowfullscreen title="Сонсох бичлэг"></iframe>` : "Бичлэг удахгүй нэмэгдэнэ";
-    const tr = (L.transcript || []).map(l => `<p style="margin:6px 0"><b>${esc(l[0])}:</b> ${esc(l[1])}</p>`).join("");
-    return `<section id="listen"><h2>${esc(label)}</h2><p class="lead">${esc(L.lead)}</p>
-      <div class="video">${video}</div>${qs(L.questions)}
+/* Өдөр бүр хоёр хэлбэрийн аль нэгээр бичиж болно:
+   1) Хуучин: listen / phrases / contrast / read / task түлхүүрүүд (steps байвал дарааллыг тодорхойлно)
+   2) Шинэ: "blocks": [ {"type": "text"|"listen"|"phrases"|"contrast"|"read"|"task", ...}, ... ]
+      Дарааллыг массив тодорхойлно, ижил төрлийг олон удаа ашиглаж болно.
+   "redirect": "custom/day-07.html" гэвэл тэр өдөр огт өөр хуудас руу шилжинэ (URL нь ижил хэвээр). */
+const BLOCKS = {
+  text: (b, id) => `<section id="${id}">${b.title ? `<h2>${esc(b.title)}</h2>` : ""}
+      ${(b.paragraphs || []).map(p => `<p style="margin:0 0 12px">${esc(p)}</p>`).join("")}
+      ${b.bullets ? `<ul class="bul">${b.bullets.map(x => `<li>${esc(x)}</li>`).join("")}</ul>` : ""}</section>`,
+  listen: (b, id) => {
+    const video = b.video ? `<iframe src="https://www.youtube-nocookie.com/embed/${esc(b.video)}" allowfullscreen title="Сонсох бичлэг"></iframe>` : "Бичлэг удахгүй нэмэгдэнэ";
+    const tr = (b.transcript || []).map(l => `<p style="margin:6px 0"><b>${esc(l[0])}:</b> ${esc(l[1])}</p>`).join("");
+    return `<section id="${id}"><h2>${esc(b.title || b.label || LABELS.listen)}</h2><p class="lead">${esc(b.lead)}</p>
+      <div class="video">${video}</div>${qs(b.questions)}
       ${tr ? `<details><summary>Хариулсны дараа бичвэрийг харах</summary><div class="in">${tr}</div></details>` : ""}</section>`;
   },
-  phrases: (d, label) => `<section id="phrases"><h2>${esc(label)}</h2><p class="lead">Өнөөдөр цээжлэх хэллэгүүд. Чанга дуугаар хэд хэд давт.</p>
-      <div class="cards">${d.phrases.map(p => `<div class="ex"><p class="en">${esc(p[0])}</p><p class="mn">${esc(p[1])}</p><p class="use">${esc(p[2])}</p></div>`).join("")}</div></section>`,
-  contrast: (d, label) => `<section id="contrast"><h2>${esc(label)}</h2><p class="lead">Төстэй хэллэгүүдийг хэзээ ялгаж хэрэглэх вэ.</p>
-      ${d.contrast.map(c => `<div class="pair"><h3>${esc(c[0])}</h3>${c[1].map(r => `<div class="row"><span>${esc(r[0])}</span><q>${esc(r[1])}</q></div>`).join("")}</div>`).join("")}</section>`,
-  read: (d, label) => {
-    const R = d.read;
-    const speakers = [...new Set((R.chat || []).map(m => m[0]))];
-    const me = R.me || speakers[1];   // баруун талд, алтан өнгөөр гарах хүн
-    return `<section id="read"><h2>${esc(label)}</h2><p class="lead">${esc(R.lead)}</p>
-      <div class="chat">${(R.chat || []).map(m => `<div class="msg ${m[0] === me ? "r" : ""}"><small>${esc(m[0])} · ${esc(m[1])}</small>${esc(m[2])}</div>`).join("")}</div>${qs(R.questions)}
-      <p class="note">${esc(R.note || "Дээрх хоёр хэсгийн хариултыг Discord дээр бичихгүй. Хариултын түлхүүр /submit хийсний дараа гарна.")}</p></section>`;
+  phrases: (b, id) => `<section id="${id}"><h2>${esc(b.title || b.label || LABELS.phrases)}</h2><p class="lead">${esc(b.lead || "Өнөөдөр цээжлэх хэллэгүүд. Чанга дуугаар хэд хэд давт.")}</p>
+      <div class="cards">${(b.items || []).map(p => `<div class="ex"><p class="en">${esc(p[0])}</p><p class="mn">${esc(p[1])}</p><p class="use">${esc(p[2])}</p></div>`).join("")}</div></section>`,
+  contrast: (b, id) => `<section id="${id}"><h2>${esc(b.title || b.label || LABELS.contrast)}</h2><p class="lead">${esc(b.lead || "Төстэй хэллэгүүдийг хэзээ ялгаж хэрэглэх вэ.")}</p>
+      ${(b.items || []).map(c => `<div class="pair"><h3>${esc(c[0])}</h3>${c[1].map(r => `<div class="row"><span>${esc(r[0])}</span><q>${esc(r[1])}</q></div>`).join("")}</div>`).join("")}</section>`,
+  read: (b, id) => {
+    let content;
+    if (Array.isArray(b.chat) && b.chat.length) {
+      const speakers = [...new Set(b.chat.map(m => m[0]))];
+      const me = b.me || speakers[1];   // баруун талд, алтан өнгөөр гарах хүн
+      content = `<div class="chat">${b.chat.map(m => `<div class="msg ${m[0] === me ? "r" : ""}"><small>${esc(m[0])} · ${esc(m[1])}</small>${esc(m[2])}</div>`).join("")}</div>`;
+    } else {
+      content = `<div class="passage">${b.articleTitle ? `<h3 class="art">${esc(b.articleTitle)}</h3>` : ""}${(b.paragraphs || []).map(p => `<p>${esc(p)}</p>`).join("")}</div>`;   // имэйл, нийтлэл гэх мэт
+    }
+    return `<section id="${id}"><h2>${esc(b.title || b.label || LABELS.read)}</h2><p class="lead">${esc(b.lead)}</p>
+      ${content}${qs(b.questions)}
+      <p class="note">${esc(b.note || "Дээрх хоёр хэсгийн хариултыг Discord дээр бичихгүй. Хариултын түлхүүр /submit хийсний дараа гарна.")}</p></section>`;
   },
-  task: (d, label) => {
-    const T = d.task;
-    return `<section id="task"><h2>${esc(T.title || label)}</h2>
-      <div class="task"><p style="margin:0">${esc(T.lead)}</p><blockquote>${esc(T.message)}</blockquote>
-        <p style="margin:0 0 4px">${esc(T.problemsLabel || "Танд дараах асуудлууд байна:")}</p><ul>${(T.problems || []).map(p => `<li>${esc(p)}</li>`).join("")}</ul>
-        <p style="margin:14px 0 4px">${esc(T.rulesLabel || "Хариугаа бичихдээ:")}</p><ul>${(T.rules || []).map(p => `<li>${esc(p)}</li>`).join("")}</ul>
-        <button class="btn" id="cp">Discord дээр /submit бичих</button>
-        <p class="note" id="cpn">Товч дарахад /submit командыг хуулна. Discord руу очоод буулгана.</p></div></section>`;
-  }
+  task: (b, id) => `<section id="${id}"><h2>${esc(b.title || b.label || LABELS.task)}</h2>
+      <div class="task"><p style="margin:0">${esc(b.lead)}</p><blockquote>${esc(b.message)}</blockquote>
+        <p style="margin:0 0 4px">${esc(b.problemsLabel || "Танд дараах асуудлууд байна:")}</p><ul>${(b.problems || []).map(p => `<li>${esc(p)}</li>`).join("")}</ul>
+        <p style="margin:14px 0 4px">${esc(b.rulesLabel || "Хариугаа бичихдээ:")}</p><ul>${(b.rules || []).map(p => `<li>${esc(p)}</li>`).join("")}</ul>
+        <button class="btn cp">Discord дээр /submit бичих</button>
+        <p class="note cpn">Товч дарахад /submit командыг хуулна. Discord руу очоод буулгана.</p></div></section>`
 };
+
+/* Хуучин хэлбэрийг (listen/phrases/... түлхүүрүүд) blocks болгон хувиргана */
+function toBlocks(d){
+  if (Array.isArray(d.blocks) && d.blocks.length) return d.blocks;
+  const hasSteps = Array.isArray(d.steps) && d.steps.length > 0;
+  const ids = hasSteps ? d.steps.map(s => s[0]) : ORDER.filter(k => d[k]);
+  const lab = id => (hasSteps && (d.steps.find(s => s[0] === id) || [])[1]) || LABELS[id] || id;
+  return ids.filter(id => d[id]).map(id => {
+    const v = d[id];
+    const b = Array.isArray(v) ? {items: v} : {...v};
+    if (id === "listen" && d.video) b.video = d.video;
+    return {type: id, label: lab(id), ...b};
+  });
+}
 
 function render(d, n){
   const total = d.total || 28;
-  const hasSteps = Array.isArray(d.steps) && d.steps.length > 0;
-  const ids = hasSteps ? d.steps.map(s => s[0]) : ORDER.filter(k => d[k]);
-  const label = id => (hasSteps && (d.steps.find(s => s[0] === id) || [])[1]) || LABELS[id] || id;
+  const useBlocks = Array.isArray(d.blocks) && d.blocks.length > 0;
+  const hasSteps = !useBlocks && Array.isArray(d.steps) && d.steps.length > 0;
+  const blocks = toBlocks(d);
+  const used = new Set();
+  const anchors = blocks.map((b, i) => { const id = b.id || (used.has(b.type) ? `${b.type}-${i + 1}` : b.type); used.add(b.type); return id; });
 
   document.title = `Өдөр ${n} — ${d.title || ""}`;
   const strip = Array.from({length: total}, (_, i) => `<a href="?day=${i + 1}" aria-label="Өдөр ${i + 1}" class="${i + 1 < n ? "done" : i + 1 === n ? "now" : ""}"></a>`).join("");
   const checklist = hasSteps
     ? `<ul class="steps" aria-label="Өнөөдрийн алхмууд">${d.steps.map(s => `<li data-s="${esc(s[0])}"><input type="checkbox" aria-label="${esc(s[1])}"><a href="#${esc(s[0])}">${esc(s[1])}</a>${s[2] ? `<span>${esc(s[2])} мин</span>` : ""}</li>`).join("")}</ul>`
     : "";
-  const body = ids.map(id => {
-    try { return SECTIONS[id] && d[id] ? SECTIONS[id](d, label(id)) : ""; }
-    catch (e) { console.error(`Section "${id}" алдаатай:`, e); return `<section><p class="note">"${esc(id)}" хэсгийг харуулж чадсангүй (JSON-оо шалгана уу).</p></section>`; }
+  const body = blocks.map((b, i) => {
+    try {
+      const f = BLOCKS[b.type];
+      if (!f) return `<section><p class="note">"${esc(b.type)}" гэсэн төрөл олдсонгүй.</p></section>`;
+      return f(b, anchors[i]);
+    } catch (e) {
+      console.error(`Block ${i + 1} (${b.type}) алдаатай:`, e);
+      return `<section><p class="note">${i + 1}-р хэсгийг (${esc(b.type)}) харуулж чадсангүй. JSON-оо шалгана уу.</p></section>`;
+    }
   }).join("");
 
   $("#app").innerHTML = `
@@ -157,15 +192,15 @@ function render(d, n){
       cb.addEventListener("change", () => { li.classList.toggle("ok", cb.checked); saved[s[0]] = cb.checked; try { localStorage.setItem(key, JSON.stringify(saved)); } catch (e) {} });
     });
   }
-  const cp = $("#cp");
-  if (cp) cp.addEventListener("click", async () => {
-    try { await navigator.clipboard.writeText("/submit"); $("#cpn").textContent = "Хуулагдлаа. Discord дээр буулгана уу."; }
-    catch (e) { $("#cpn").textContent = "Discord дээр /submit гэж бичнэ."; }
-  });
+  document.querySelectorAll(".cp").forEach(btn => btn.addEventListener("click", async () => {
+    const note = btn.parentElement.querySelector(".cpn");
+    try { await navigator.clipboard.writeText("/submit"); note.textContent = "Хуулагдлаа. Discord дээр буулгана уу."; }
+    catch (e) { note.textContent = "Discord дээр /submit гэж бичнэ."; }
+  }));
 }
 
 const n = dayNumber();
-load(n).then(d => render(d, n)).catch(e => {
+load(n).then(d => { if (typeof d.redirect === "string" && !/^(https?:)?\/\//.test(d.redirect)) { location.replace(d.redirect); return; } render(d, n); }).catch(e => {
   console.error("Өдрийн өгөгдөл ачаалж чадсангүй:", e);
   $("#app").innerHTML = `<div class="err">Өдөр ${n}-ийн хуудсыг ачаалж чадсангүй. Хэсэг хүлээгээд дахин оролдоно уу.<br><small>days/day-${String(n).padStart(2, "0")}.json нээгдэхгүй байна эсвэл JSON-д алдаа байна.</small></div>`;
 });
