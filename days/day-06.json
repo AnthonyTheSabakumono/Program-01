@@ -65,7 +65,7 @@
   "read": {
     "lead": "Найзуудын чат. Нэг удаа уншаад асуултад хариул.",
     "chat": [
-      ["Sara", "10:20", "Hi Tom, could you send me the notes from yesterday's lecture? I couldn't attend."],
+      ["Sara", "10:20", "Hi Anthony, could you send me the notes from yesterday's lecture? I couldn't attend."],
       ["Anthony", "10:22", "Of course. I'll send you the photos in a minute."],
       ["Sara", "10:23", "Thanks! Would you mind explaining the last topic too? I found it a little confusing."],
       ["Anthony", "10:25", "Not at all. I can explain it after class if you want."],
